@@ -3,6 +3,12 @@
 
 
 def dict_from_str(my_str):
+    """
+    A simple function which returns
+    a dict whose keys/values are
+    my_str's letters and their occurrences.
+    """
+    
     my_dict = dict()
     for letter in my_str:
         if my_dict.get(letter, False):
@@ -13,6 +19,11 @@ def dict_from_str(my_str):
 
 
 def anagrams(first_str, second_str):
+    """
+    A simple function which test if
+    two strings are anagrams.
+    """
+    
     if not len(first_str) == len(second_str):
         return False
     return dict_from_str(first_str) == dict_from_str(second_str)
